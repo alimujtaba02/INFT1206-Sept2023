@@ -65,6 +65,7 @@
       }
 
       iframe {
+        border:none;
         float: left;
         margin: 0 20px 20px 0;
         max-width: 100%;
@@ -114,7 +115,7 @@
       <article>
         <!-- insert iframe from youtube
         height was also resized to keep aspect ratios -->
-        <iframe width="400" height="225" src="https://www.youtube.com/embed/ojcNcvb1olg?si=DYsEQroHCfs1zta8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="400" height="225" src="https://www.youtube.com/embed/ojcNcvb1olg?si=DYsEQroHCfs1zta8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
         <h2>Rocking the free web</h2>
 
@@ -163,9 +164,9 @@
         <!-- insert picture element -->
         <picture>
            <!-- For viewports 600px wide or less -->
-          <source media="(max-width: 600px)" srcset="red_panda-600.jpg" alt="portrait red panda">
+          <source media="(max-width: 600px)" srcset="red_panda-600.jpg" >
           <!-- For viewports larger than 600px -->
-          <source media="(min-width: 601px)" srcset="red_panda-1200.jpg" alt="landscape red panda">
+          <source media="(min-width: 601px)" srcset="red_panda-1200.jpg" >
           <!-- Default image if none of the above sources are applicable -->
           <img src="red-panda.jpg" alt="Red Panda">
         </picture>
