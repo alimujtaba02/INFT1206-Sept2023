@@ -5,50 +5,75 @@
 	A letter which we are marking up using HTML
 	-->
 
-Dr. Eleanor Gaye
-Awesome Science faculty
-University of Awesome
-Bobtown, CA 99999,
-USA
-Tel: 123-456-7890
-Email: no_reply@example.com
+	<!--Declaring the doctype for HTML5-->
+	<!DOCTYPE html>
+	<html lang="en">
+	<!--Creating the head of the HTML-->
+	  <head>
+		<meta charset="utf-8">
+		<!--Setting an appropriate title and linking the style sheet-->
+		<meta name="author" content="Dr. Eleanor Gaye">
+		<title>Eileen Dover University Application Letter</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
 
-20 January 2016
+<!--creating the body and marking up the text
+Starting with the first address class as per instructions-->
+<body>
+	<address class = "sender-column">
+	<strong>Dr. Eleanor Gaye</strong><br>
+	Awesome Science faculty<br>
+	University of Awesome<br>
+	Bobtown, CA 99999,<br>
+	USA<br>
+	Tel: <strong>123-456-7890</strong><br>
+	Email: <strong>no_reply@example.com</strong> <br>
+	</address>
 
-Miss Eileen Dover
-4321 Cliff Top Edge
-Dover, CT9 XXX
-UK
+<!--Turning the date and time to machine readable, and keeping it in the sender column-->
+	<time datetime="2016-01-20" class="sender-column">20 January 2016</time>
+<!--Second address Class, this does not need to be named, since we will not add anything else to it after close-->
+	<address>
+	<strong>Miss Eileen Dover</strong><br>
+	4321 Cliff Top Edge<br>
+	Dover, CT9 XXX<br>
+	UK
+	</address>
+
+	<!-- declaring the first heading and its subsequent paragraphs, adding the abbreviations-->
+	<h1>Re: Eileen Dover university application</h1>
+
+	<p>Dear <strong>Eileen</strong>,</p>
+
+	<p>Thank you for your recent application to join us at the University of Awesome's science faculty to study as part of your <abbr title="Doctorate of Philosophy">PhD</abbr> next year. I will answer your questions one by one, in the following sections.</p>
+	
+	<!-- marking up the lists containing start dates and subjects-->
+	<h2>Starting dates</h2>
+
+	<p>We are happy to accommodate you starting your study with us at any time, however it would suit us better if you could start at the beginning of a semester; the start dates for each one are as follows:</p>
+	
+	<!-- since order does not matter here, we will use the ul tag for an unordered list-->
+	<ul>
+	<li>First semester: 9 September 2016</li>
+	<li>Second semester: 15 January 2017</li>
+	<li>semester: 2 May 2017</li> 
+	</ul>
+	<p>Please let me know if this is ok, and if so which start date you would prefer.</p>
+	
+	<!--this contains an example hyperlink as per requirements-->
+	<p>You can find more information about <a href"http://example.com" title ="Important Dates- University of awesome">important university</a>dates on our website.</p>
 
 
-Re: Eileen Dover university application
+	<h2>Subjects of study</h2>
 
-Dear Eileen,
-
-Thank you for your recent application to join us at the University of Awesome's science faculty to study as part of your PhD next year. I will answer your questions one by one, in the following sections.
-
-Starting dates
-
-We are happy to accommodate you starting your study with us at any time, however it would suit us better if you could start at the beginning of a semester; the start dates for each one are as follows:
-
-First semester: 9 September 2016
-Second semester: 15 January 2017
-Third semester: 2 May 2017
-
-Please let me know if this is ok, and if so which start date you would prefer.
-
-You can find more information about important university dates on our website.
-
-
-Subjects of study
-
-At the Awesome Science Faculty, we have a pretty open-minded research facility — as long as the subjects fall somewhere in the realm of science and technology. You seem like an intelligent, dedicated researcher, and just the kind of person we'd like to have on our team. Saying that, of the ideas you submitted we were most intrigued by are as follows, in order of priority:
-
-Turning H2O into wine, and the health benefits of Resveratrol (C14H12O3.)
-Measuring the effect on performance of funk bassplayers at temperatures exceeding 30°C (86°F), when the audience size exponentially increases (effect of 3 × 103 increasing to 3 × 104.)
-HTML and CSS constructs for representing musical scores.
-
-So please can you provide more information on each of these subjects, including how long you'd expect the research to take, required staff and other resources, and anything else you think we'd need to know? Thanks.
+	<p>At the Awesome Science Faculty, we have a pretty open-minded research facility — as long as the subjects fall somewhere in the realm of science and technology. You seem like an intelligent, dedicated researcher, and just the kind of person we'd like to have on our team. Saying that, of the ideas you submitted we were most intrigued by are as follows, in order of priority:</p>
+	<!--Since order does matter here, we will use the ol (ordered list) tag, we will also use sub and sup tags for the subscripts and superscripts-->
+	<ol>
+	<li>Turning <abbr title="Water">H<sub>2</sub>O</abbr> into wine, and the health benefits of Resveratrol (C<sub>14</sub>H<sub>12</sub>O<sub>3</sub>.)</li>
+	<li>Measuring the effect on performance of funk bassplayers at temperatures exceeding 30°C (86°F), when the audience size exponentially increases (effect of 3 × 10<sup>3</sup> increasing to 3 × 10<sup>4</sup>)</li>
+	<li><abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading StyleSheets">CSS</abbr> constructs for representing musical scores.</li>
+	</ol>
+	<p>So please can you provide more information on each of these subjects, including how long you'd expect the research to take, required staff and other resources, and anything else you think we'd need to know? Thanks.</p>
 
 
 Exotic dance moves
