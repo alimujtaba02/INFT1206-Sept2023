@@ -107,12 +107,14 @@
       <h1>Mozilla</h1>
       <!-- insert <img> element, link to the small
           version of the Firefox logo -->
-
+          <img src="firefox_logo-120.png" alt="firefox logo">
     </header>
 
     <main>
       <article>
-        <!-- insert iframe from youtube -->
+        <!-- insert iframe from youtube
+        height was also resized to keep aspect ratios -->
+        <iframe width="400" height="225" src="https://www.youtube.com/embed/ojcNcvb1olg?si=DYsEQroHCfs1zta8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
         <h2>Rocking the free web</h2>
 
@@ -123,23 +125,50 @@
 
       <div class="further-info">
         <!-- insert images with srcsets and sizes -->
+        <!-- first link with firefox logo-->
         <a href="https://www.mozilla.org/en-US/firefox/new/">
-          <img>
+          <img src="firefox_logo-Only_RGB.png"
+          srcset="firefox_logo-120.png 120w, firefox_logo-400.png 400w"
+          sizes="(max-width: 500px) 120px, 400px"
+          alt="firefox logo">
         </a>
+        
+        <!-- second link link with dinosaur logo-->
         <a href="https://www.mozilla.org/">
-          <img>
+          <img src="mozilla-dinosaur-head.png"
+          srcset="mozilla_dinosaur-120.png 120w, mozilla_dinosaur-400.png 400w"
+          sizes="(max-width: 500px) 120px, 400px"
+          alt="Mozilla dinosaur">
         </a>
+
+        <!--Third link with firefox addons-->
         <a href="https://addons.mozilla.org/">
-          <img>
+          <img src="firefox-addons.jpg"
+          srcset="firefox-addons-120.jpg 120w, firefox-addons-400.jpg 400w"
+          sizes="(max-width: 500px) 120px, 400px"
+          alt="Firefox addons">
         </a>
+
+        <!--Fourth link with mdn svg-->
         <a href="https://developer.mozilla.org/en-US/">
-          <img>
+          <img src="mdn.svg"
+          srcset="mdn-120.svg 120w, mdn-400.svg 400w"
+          sizes="(max-width: 500px) 120px, 400px"
+          alt="mdn logo">
         </a>
         <div class="clearfix"></div>
       </div>
 
       <div class="red-panda">
         <!-- insert picture element -->
+        <picture>
+           <!-- For viewports 600px wide or less -->
+          <source media="(max-width: 600px)" srcset="red_panda-600.jpg" alt="portrait red panda">
+          <!-- For viewports larger than 600px -->
+          <source media="(min-width: 601px)" srcset="red_panda-1200.jpg" alt="landscape red panda">
+          <!-- Default image if none of the above sources are applicable -->
+          <img src="red-panda.jpg" alt="Red Panda">
+        </picture>
       </div>
 
     </main>
