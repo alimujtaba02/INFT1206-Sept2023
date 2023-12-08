@@ -33,3 +33,8 @@ tr:nth-child(odd) td {
 caption {
   padding: 10px;
 }
+
+/*creating a border for planet names*/
+.planet-name {
+  border: 2px solid black;
+}
