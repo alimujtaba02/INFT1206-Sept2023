@@ -2,4 +2,43 @@ html {
   font-family: sans-serif;
 }
 
-/* Your CSS below here */
+/* Base Styles for the div */
+div {
+  /*assigning reasonable height and width*/
+  width: 200px; 
+  height: 100px; 
+  /*centering displays*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.125rem; /* 18 pixels in rems (1rem = 16px, so 18/16 = 1.125) */
+  /*Setting colours*/
+  background-color: #0772b9; 
+  color: #ffffff56; 
+  text-shadow: 1px 1px 1px black; 
+  /*setting a border*/
+  border-radius: 6px; 
+  border: 1px solid #1e6a9e; 
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient Overlay */
+div:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+/* Box Shadows */
+div {
+  box-shadow:
+      0 4px 8px rgba(0, 0, 0, 0.2), /* Standard box shadow */
+      inset 4px 4px 8px rgba(255, 255, 255, 0.5), /* white shadow near top left */
+      inset -4px -4px 8px rgba(0, 0, 0, 0.5); /*  black shadow near bottom right */
+}
