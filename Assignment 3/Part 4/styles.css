@@ -16,19 +16,37 @@ body {
     margin: 0 auto;
     max-width: 980px;
   }
-  
+
+  /*Turning the display to a grid as specified*/
   .grid {
+    display: grid;
+    /*appropriately sizing the space taken up by text and photos*/
+    grid-template-columns: 2fr 0.5fr;
+    gap: 10px;
     margin: 0 auto;
     padding: 0 20px;
     max-width: 980px;
   }
   
+  /*adjusting the grid for smaller screens*/
+  @media screen and (max-width: 710px) { 
+    .grid {
+        grid-template-columns: 0.75fr;
+    }
+}
+  
   nav {
+    /*ensuring the nav bar is sticky*/
+    position:sticky;
     background-color: #000;
     padding: .5em;
   }
   
+  /*Start by fixing the navigation menu*/
   nav ul {
+    /*make the items flexible and evenly spaced*/
+    display: flex;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -40,12 +58,22 @@ body {
     padding: .5em 1em;
   }
   
+  /*turning the photos into another grid*/
   .photos {
+    display: grid;
+    /*applying the styling to all photos, accounting for the uneven number of pictures*/
+    grid-template-columns: repeat(2,1fr);
+    /*creating space between the photos*/
+    gap: 3px;
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
+  /*wrapping the text around the image*/
   .feature {
+    /*to do this, we need to bring the image to the left, and create some margin for the text*/
+      float:left;
+      margin-right: 10px;
       width: 200px;
   }
