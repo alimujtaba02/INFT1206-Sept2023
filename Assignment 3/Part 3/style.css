@@ -42,4 +42,138 @@ header, footer {
   border-bottom: 5px solid #a66;
 }
 
-/* WRITE YOUR CODE BELOW HERE */
+/* WRITE YOUR CODE BELOW HERE*/
+/*import the fonts*/
+@font-face {
+  font-family: 'Zilla';
+  src: url(Zilla_font/ZillaSlab-Regular.ttf);
+  
+}
+@font-face {
+  font-family: 'Arvo';
+  /*import bold for headings*/
+  src: url(Arvo_font/Arvo-Bold.ttf);
+}
+
+/*start by the universal text size */
+ html{
+  font-size: 10px;
+  font-family: 'Zilla';
+ }
+
+ /*Now adjust the size, letter spacing of the headings*/
+ h1, h2{
+  font-size: 22px;
+  letter-spacing: 0.15px;
+  font-family: 'Arvo';
+ }
+
+ /*give the body a proper line height, letter spacing, and word spacing*/
+ body{
+  line-height: 1.5em;
+  letter-spacing: 0.15px;
+  word-spacing: 0.15px;
+ }
+
+ /*center top heading*/
+ h1{
+  text-align: center;
+ }
+
+ /*applying indentation to the paragraph after h2's*/
+ section > h2 + p {
+  text-indent: 20px;
+}
+
+/*syling the links*/
+a:link{
+  color:rgb(181, 110, 84);
+  text-decoration: underline;
+}
+
+/*hover*/
+a:hover{
+  color:rgb(183, 108, 83);
+  text-decoration: none;
+}
+
+/*focus*/
+a:focus{
+  color:rgb(183, 108, 83);
+  text-decoration: none;
+  outline: none; 
+}
+
+/*clicked*/
+a:visited{
+  color:rgb(134, 37, 5);
+}
+
+/*active*/
+a:active {
+  color: rgb(150, 50, 30); 
+  font-weight: bold; /* to fulfill additional styling requirement*/
+
+}
+
+/* external links, adding the png*/
+a[href^="https://"]::after /*this line applies styling to all links with an https:// reference
+                          The after keyword makes sure the png shows to the left of text*/
+ {
+    content: url('external-link-52.png'); /* this references the image provided to us in the files*/
+    margin-left: 2px; /*adds a little bit of space between the icon and the text*/   
+}
+
+/* General list styling */
+ul, ol {
+  /* setting the same properties as the body*/
+  padding: 0;
+  margin-top: 1.5em; 
+  margin-bottom: 1.5em; 
+  /*keeping the indentation in line with the paragraphs*/
+  padding-left: 20px;
+}
+
+li {
+  line-height: 1.5em; 
+  /* Half of body line-height for spacing between list items */
+  margin-bottom: 0.75em; 
+}
+
+/* Custom bullet for unordered list */
+ul {
+  list-style-type: disc; 
+}
+
+/* Styling for ordered list */
+ol {
+  list-style-type: upper-roman;
+}
+
+/*Styling the nav menu*/
+/* Vertical navigation menu */
+nav ul {
+  list-style: none;
+  padding: 0; 
+  margin: 0; 
+}
+/*adding space in the menu*/
+nav ul li {
+  margin-bottom: 20px; 
+}
+
+/*Styling the links within the menu*/
+nav ul li a:link {
+  /*text styling*/
+  font-family: 'Arvo';
+  text-decoration: none;
+  display: block; 
+  color: rgb(181, 110, 84); 
+  /*to make it look like a button*/
+  background-color: #e3e2e2; 
+  padding: 10px; 
+  text-align: center; 
+  border-radius: 4px; 
+}
+
+
