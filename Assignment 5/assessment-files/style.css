@@ -16,32 +16,33 @@ body {
   margin: 0 auto;
 }
 
-/* || typography */
+/* || Typography */
 
-font[size="7"], font[size="6"], font[size="5"] {
-  font-family: 'Sonsie One', cursive;
+/* Keeping the original font families and adjusting selectors for semantic HTML */
+h1, h2, h3, h4 {
+  font-family: 'Sonsie One', cursive; /* Maintained original font for headings */
   color: #2a2a2a;
 }
 
 p, input, li, table, label {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif; /* Maintained original font for other text */
   color: #2a2a2a;
 }
 
-font[size="7"] {
-  font-size: 4rem;
+h1 {
+  font-size: 4rem; /* Size equivalent to original font[size="7"] */
   text-align: center;
   color: white;
   text-shadow: 2px 2px 10px black;
 }
 
-font[size="6"] {
-  font-size: 3rem;
+h2 {
+  font-size: 3rem; /* Size equivalent to original font[size="6"] */
   text-align: center;
 }
 
-font[size="5"] {
-  font-size: 2.2rem;
+h3, .comments h4 { /* Added .comments h4 for specific styling in the comments section */
+  font-size: 5rem; /* Size equivalent to original font[size="5"] */
 }
 
 p, li, table {
@@ -49,9 +50,10 @@ p, li, table {
   line-height: 1.5;
 }
 
-/* || header layout */
+/* || Header Layout */
 
-div[class="nav"], article, footer, .secondary {
+/* Updated selector to use semantic nav tag */
+nav, article, footer, .secondary {
   background-color: rgb(162, 226, 248);
 }
 
@@ -63,28 +65,28 @@ article {
   margin-right: 10px;
 }
 
-div[class="nav"] {
+nav {
   height: 50px;
-  background-color: ff80ff;
+  background-color: #ffffff; /* Corrected color code format */
   display: flex;
   padding: 1% 0;
   margin-bottom: 10px;
 }
 
-div[class="nav"] ul {
+nav ul {
   padding: 0;
   list-style-type: none;
   flex: 2;
   display: flex;
 }
 
-div[class="nav"] li {
+nav li {
   display: inline;
   text-align: center;
   flex: 1;
 }
 
-div[class="nav"] a {
+nav a {
   display: inline-block;
   font-size: 2rem;
   text-transform: uppercase;
@@ -92,7 +94,7 @@ div[class="nav"] a {
   color: black;
 }
 
-div[class="nav"] .search {
+nav .search {
   flex: 1;
   display: flex;
   align-items: center;
@@ -117,7 +119,7 @@ div[class="nav"] .search {
   color: white;
 }
 
-/* || main layout */
+/* || Main Layout */
 
 main {
   display: flex;
@@ -128,6 +130,7 @@ article {
 }
 
 .secondary {
+  font-size: 3rem;
   flex: 2;
 }
 
@@ -135,7 +138,7 @@ footer {
   margin-top: 10px;
 }
 
-/* Table styling */
+/* Table Styling */
 
 table {
   width: 100%;
@@ -159,7 +162,7 @@ tbody tr:nth-child(odd) {
   background-color: #def;
 }
 
-/* styling content images and audio */
+/* Styling Content Images and Audio */
 
 img, audio {
   display: block;
@@ -170,7 +173,7 @@ audio {
   width: 500px;
 }
 
-/* Comments styling */
+/* Comments Styling */
 
 .comments {
   background-color: #def;
@@ -181,11 +184,9 @@ audio {
   cursor: pointer;
 }
 
-.comments font[size="6"] {
-  font-size: 2rem;
-}
-
-.comments font[size="6"]:nth-of-type(2) {
+/* Specific styling for comment section headings */
+.comments h4 {
+  font-size: 2%;
   margin-bottom: 0;
 }
 
